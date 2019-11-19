@@ -10,9 +10,6 @@ publish = false
 name = "rust_python_test"
 crate-type = ["rlib", "cdylib"]
 
-[features]
-python = ["pyo3"]
-python-extension = ["python", "pyo3/extension-module"]
-
-[dependencies]
-pyo3 = { version = "0.8.0", optional = true }
+[dependencies.pyo3]
+version = "0.8.2"
+features = ["extension-module"]
